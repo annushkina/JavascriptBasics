@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Basic Challenges: Challenge 1</title>
+</head>
+
+<body>
+  <h1>
+    JavaScript Basic Challenges
+  </h1>
+  <h2>
+    Challenge 1
+  </h2>
+
+  <!-- //Challenge 1 -->
+  <!-- <script>
+        var firstName = "Anna";
+        var lastName = "kakhidze";
+        console.log(firstName);
+        console.log(lastName);
+    </script> -->
+
+  <!-- //Challenge 2 -->
+  <!-- <script>
+        var firstName = "Anna";
+        var lastName = "kakhidze";
+        console.log(firstName+' '+lastName);
+    </script> -->
+
+  <!-- //Challenge 3
+    <script>
+        var firstName = "Anna";
+        var lastName = "kakhidze";
+        var adjective = "tall";
+        console.log(`We know that ${firstName} ${lastName} is very ${adjective}`);
+    </script> -->
+
+  <!-- //Challenge 4 -->
+  <!-- <script>
+        var name = prompt("what's your name?", "Anna");
+        console.log(`Hello ${name}, and welcome!`);
+    </script> -->
+
+  <!-- //Challenge 5 -->
+  <!-- <script>
+        var userNum = prompt("write the number", "");
+        if (userNum < 10) {
+            console.log("You ntered a number smaller than 10"+1);
+        }
+        else {
+            console.log("You entered a big number"+1);
+        }
+    </script> -->
+
+  <!-- //Challenge 6 -->
+  <!-- <script>
+        var userNum = prompt("write the number", "");
+        if (userNum < 10) {
+            console.log("You ntered a number smaller than 10");
+        }
+        else if (userNum>9){
+            console.log("You entered a big number");
+        }
+        else {
+            console.log("ERROR:you didn't enter a number!");
+        }
+    </script> -->
+
+  <!-- //Challenge 7
+    <script>
+        var userNum = prompt("write the number", "");
+        if (userNum < 10) {
+            console.log("You entered a number smaller than 10");
+            for (var i = 0; i < 10; i++) {
+                console.log(`Here is ${i}`);
+            }
+        }
+        else if (userNum > 9) {
+            console.log("You entered a big number");
+        }
+        else {
+            console.log("ERROR:you didn't enter a number!");
+        }
+    </script> -->
+  <!-- 
+    //Challenge 8
+    <script>
+        var userNum = prompt("write the number", "");
+        if (userNum < 10) {
+            console.log("You ntered a number smaller than 10");
+            for (var i = 0; i < 10; i++) {
+                if (i == userNum) {
+                    console.log(`Here is ${i} <-- This is your number!`)
+                }
+                else {
+                    console.log(`Here is ${i}`);
+                }
+            }
+        }
+        else if (userNum > 9) {
+            console.log("You entered a big number");
+        }
+        else {
+            console.log("ERROR:you didn't enter a number!");
+        }
+    </script> -->
+
+
+  <!-- //Challenge 8 -->
+  <!-- <script>
+        var primary = ['red', 'blue', 'yellow'];
+        var secondary = ['orange', 'green', 'purple'];
+        var color = prompt("enter the color", "");
+
+        for (var i = 0; i < 3; i++) {
+            if (color.toLowerCase() === primary[i]) {
+                console.log(`you picked a primary color: ${color}`);
+            }
+            else if (color === secondary[i]) {
+                console.log(`you picked a secondary color: ${color}`);
+            }
+
+        }
+
+    </script>
+
+    or this way
+
+    <script>
+        var color = prompt("enter the color", "");
+        color = color.toLocaleLowerCase();
+
+        for (var i = 0; i < 3; i++) {
+            if (color === 'red' || color === 'blue' || color === 'yellow') {
+                console.log(`you picked a primary color: ${color}`);
+            }
+            else if (color === 'orange' || color === 'green' || color === 'purple') {
+                console.log(`you picked a secondary color: ${color}`);
+            }
+        }
+
+    </script> -->
+
+  <!-- //Functions  -->
+  <!-- //Challenge 10 -->
+  <!-- <script>
+    function hello() {
+      console.log("Hello, and Welcome!");
+    }
+    hello();
+  </script> -->
+
+  <!-- //Challenge 11 -->
+  <!-- <script>
+    function hello(name) {
+      console.log(`Hello, ${name} and Welcome!`);
+    }
+    hello("John");
+  </script> -->
+
+  <!-- //Challenge 12
+  <script>
+    var userName=prompt("provide your name", "");
+    function hello(userName) {
+      console.log(`Hello, ${userName} and Welcome!`);
+    }
+    hello(userName);
+  </script> -->
+
+  <!-- //Challenge 13 -->
+  <!-- <script>
+    var userName = prompt("provide your name", "");
+    function hello(userName) {
+      if (userName) {
+        console.log(`Hello, ${userName} and Welcome!`);
+      }
+      else {
+        console.log("You didn't give me your name");
+      }
+    }
+    hello(userName);
+
+  </script> -->
+
+  <!-- //Challenge 14 -->
+  <!-- <script>
+    var yourName = prompt("provide your name", "");
+    function hello(name) {
+      var greeting;
+      if (name) {
+        greeting = `Hello, ${name} and Welcome!`;
+        console.log(greeting);
+      }
+      else {
+        greeting = "You didn't give me your name";
+        console.log(greeting);
+      }
+      console.log(greeting);
+      return greeting;
+    }
+    hello(yourName);
+    console.log(hello(yourName));
+
+  </script> -->
+
+  <!-- //Challenge 15 -->
+  <!-- <script>
+    var yourName = prompt("provide your name", "");
+    var foods = ['apple', 'icecream', 'orange', 'cucumber']
+    function hello(name) {
+      var greeting;
+      if (name) {
+        greeting = `Hello, ${name} and Welcome!`;
+      }
+      else {
+        greeting = "You didn't give me your name";
+      }
+      return greeting;
+    }
+    // console.log(hello(yourName));
+    hello(yourName);
+
+    function hospitality(name, gift) {
+      console.log(hello(yourName));
+      for (var i = 0; i < gift.length; i++) {
+        console.log(`${name}, would you like some ${gift[i]}?`);
+      }
+    }
+    hospitality(yourName, foods);
+
+  </script> -->
+
+  //Challenge 16
+  <script>
+    var yourName = prompt("provide your name", "");
+    var foods = ['apple', 'icecream', 'orange', 'cucumber']
+    function hello(name) {
+      var greeting;
+      if (name) {
+        greeting = `Hello, ${name} and Welcome!`;
+      }
+      else {
+        greeting = "You didn't give me your name";
+      }
+      return greeting;
+    }
+
+    function randomInt(min, max) {
+      return Math.floor((max - min + 1) * Math.random()) + min;
+    }
+
+    function hospitality(name, gift) {
+      console.log(hello(yourName));
+      var randomGift = gift[randomInt(0, gift.length - 1)];
+      console.log(`${name}, would you like some ${randomGift}?`);
+    }
+    hospitality(yourName, foods);
+
+  </script>
+
+
+</body>
+
+</html>
