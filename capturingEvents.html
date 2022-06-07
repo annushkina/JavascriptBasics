@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        .one {
+            background-color: beige;
+            transition: all 3s;
+        }
+
+        .two {
+            background-color: blueviolet;
+            transition: all 3s;
+        }
+
+        .three {
+            background-color: coral;
+            transition: all 3s;
+        }
+
+        .four {
+            background-color: cornflowerblue;
+            transition: all 3s;
+        }
+
+        .five {
+            background-color: darkgoldenrod;
+            transition: all 3s;
+        }
+    </style>
+    <!-- <style>
+        div {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 0, 0);
+            transition: all 2s;
+        }
+
+        .big {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(0, 0, 255);
+            border-radius: 50%;
+            transition: all 2s;
+        }
+    </style> -->
+</head>
+
+<body class="one">
+    <h1>
+        Javascript event challenges, challenge 29
+    </h1>
+    <p>
+        Press the B key to change the page beige
+    </p>
+    <p>
+        Press the V key to change the page blueviolet
+    </p>
+    <p>
+        Press the C key to change the page coral
+    </p>
+    <p>
+        Press the F key to change the page cornflowerblue
+    </p>
+    <p>
+        Press the G key to change the page darkgoldenrod
+    </p>
+</body>
+
+<!-- <body>
+
+    <h1>
+        Javascript Event Challenges:Challenge 28
+    </h1>
+    <div></div> -->
+
+<!-- <form>
+    <label>Enter a number <input type="text" /></label>
+    <input type="submit" value="send number">
+</form>
+<h1>
+    Javascript Event Challenges:Challenge 24
+</h1> -->
+
+<!-- <div>
+        <p>
+            Here is the paragraph number 1
+        </p>
+    </div>
+
+    <button>
+        Add a paragraph
+    </button>
+    <button>
+        Remove a paragraph
+    </button> -->
+<script>
+    //Challenge 22
+    // var pTag = document.querySelector('p');
+    // var btn = document.querySelector('button');
+
+
+    // btn.addEventListener('click', function () {
+    //     pTag.style.color = "green";
+    // });
+    // btn.onclick(function(){
+    //     pTag.style.color = "green";
+    // })
+
+    //Challenge 23
+    // var pTags = document.querySelectorAll('p');
+    // var btn = docoment.querySelector('button');
+
+    // btn.addEventListener('click', function () {
+    //     for (var i = 0; i < pTags.length; i++) {
+    //         pTags[i].style.color = "green";
+    //     }
+    // });
+
+
+
+    // var myDiv = document.querySelector('div');
+    // var btn = document.querySelector('button');
+
+    // btn.addEventListener('click', function () {
+    //     var newP = document.createElement('p');
+    //     var pText = document.createTextNode('Here is another paragraph');
+    //     newP.appendChild(pText);
+    //     myDiv.appendChild(newP);
+    // });
+
+    //Challenge 25
+    // var myDiv = document.querySelector('div');
+    // var btnAdd = document.querySelectorAll('button')[0];
+    // var btnDelete = document.querySelectorAll('button')[1];
+
+    // btnAdd.addEventListener('click', function () {
+    //     var newP = document.createElement('p');
+    //     var pText = document.createTextNode('Here is another paragraph');
+    //     newP.appendChild(pText);
+    //     myDiv.appendChild(newP);
+    // });
+
+    // btnDelete.addEventListener('click', function () {
+    //     var allPs = document.querySelectorAll('p');
+    //     myDiv.removeChild(myDiv.children[allPs.length - 1]);
+    // })
+
+
+    //challenge 26
+    // var divTag = document.querySelector('div');
+    // var btnAdd = document.querySelectorAll('button')[0];
+    // var btnDelete = document.querySelectorAll('button')[1];
+    // var numOfPs = 1;
+
+    // btnAdd.addEventListener('click', function () {
+    //     numOfPs++;
+    //     var newP = document.createElement('p');
+    //     var pText = document.createTextNode(`This is the paragraph number ${numOfPs}`);
+    //     newP.appendChild(pText);
+    //     divTag.appendChild(newP);
+    // });
+
+    // btnDelete.addEventListener('click', function () {
+    //     if (numOfPs > 1) {
+    //         divTag.removeChild(divTag.children[numOfPs - 1]);
+    //         numOfPs--;
+    //     }
+    //     else {
+    //         alert("Don't delete the last paragraph");
+    //     }
+    // });
+
+    //challenge 27
+    // var h1Tag = document.querySelector('h1');
+    // var formTag = document.querySelector('form');
+
+    // formTag.addEventListener('submit', function (event) {
+    //     event.preventDefault();
+    //     myNum = parseInt(document.querySelector('input').value);
+    //     if (myNum) {
+    //         h1Tag.style.fontSize = myNum + 'px';
+    //     }
+    //     else {
+    //         alert('please enter a number!');
+    //     }
+    // });
+
+    // var box = document.querySelector('div');
+
+    // box.addEventListener('mouseover', function () {
+    //     box.className = "big";
+    // });
+    // box.addEventListener('mouseout', function () {
+    //     box.removeAttribute('class');
+    // });
+
+    // var pageTop;
+    // var bodyTag = document.querySelector('body');
+
+    // window.addEventListener('scroll', function () {
+    //     pageTop = window.pageYOffset;
+    //     switch (true) {
+    //         case pageTop < 500: bodyTag.className = "one"; break;
+    //         case pageTop < 1000: bodyTag.className = "two"; break;
+    //         case pageTop < 1500: bodyTag.className = "three"; break;
+    //         case pageTop < 2000: bodyTag.className = "four"; break;
+    //         default: bodyTag.className = "five";
+    //     }
+    // });
+
+
+    var bodyTag = document.querySelector('body');
+
+    document.addEventListener('keydown', function (event) {
+        var keyPressed = event.which;
+
+        switch (keyPressed) {
+            case 86: bodyTag.className = "two"; break;
+            case 67: bodyTag.className = "three"; break;
+            case 70: bodyTag.className = "four"; break;
+            case 71: bodyTag.className = "one"; break;
+            default: alert("you didnt press any of the specified keys!");
+        }
+
+    });
+
+
+
+
+
+
+</script>
+</body>
+
+
+</html>
